@@ -11,6 +11,10 @@ each test.
 This can be done with the use of the SQL TRUNCATE and CASCADE commands. CASCADE
 will TRUNCATE all the tables linked to the table you mention.
 
+You will also need to restart the numbering of the id numbers with RESTART
+IDENTITY, as otherwise, SQL will continue from the last id number, even if you
+have deleted all the records.
+
 For example:
 
 ```ruby
